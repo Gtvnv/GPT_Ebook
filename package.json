@@ -1,0 +1,22 @@
+{
+  "name": "ebook-prompts-recipe",
+  "version": "1.0.0",
+  "description": "Receita de prompts para criar um e-book em PDF sobre CSS com tema Star Wars.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validar": "node scripts/validar.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "markdown-it": "15.0.3",
+    "puppeteer": "24.43.1"
+  },
+  "devDependencies": {
+    "fast-check": "4.10.2"
+  }
+}
