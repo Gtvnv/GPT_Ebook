@@ -1,0 +1,47 @@
+# Glossário
+
+Termos de CSS usados ao longo dos capítulos, em ordem alfabética.
+- **@keyframes**: Regra que define os quadros-chave de uma animação, descrevendo os estilos em cada etapa. Capítulo 8.
+- **@media**: Regra condicional que aplica estilos conforme características do dispositivo, como a largura da tela. Capítulo 9.
+- **align-items**: Propriedade que alinha os itens de um contêiner flex ou grid no eixo transversal. Capítulo 5.
+- **animation**: Propriedade abreviada que aplica uma animação definida por `@keyframes` a um elemento. Capítulo 8.
+- **background**: Propriedade que define cor, imagem e outros aspectos do fundo de um elemento. Capítulo 4.
+- **border**: Propriedade que define a borda de um elemento, com largura, estilo e cor. Capítulo 3.
+- **box-sizing**: Propriedade que determina se largura e altura incluem ou não padding e borda. Capítulo 3.
+- **calc()**: Função que realiza cálculos com valores e unidades diferentes. Capítulos 9 e 10.
+- **cascata**: Mecanismo que decide qual regra vence quando várias se aplicam ao mesmo elemento, considerando origem, especificidade e ordem. Capítulos 1 e 2.
+- **classe**: Seletor iniciado por ponto (`.nome`) que escolhe elementos com o atributo `class` correspondente. Capítulo 2.
+- **cor hexadecimal**: Notação de cor com `#` seguido de dígitos hexadecimais, como `#ffd700`. Capítulo 4.
+- **custom property**: Veja *variável CSS*. Capítulo 10.
+- **display**: Propriedade que define o tipo de caixa de um elemento, como `block`, `inline`, `flex` ou `grid`. Capítulos 3, 5 e 6.
+- **especificidade**: Peso de um seletor usado pela cascata para resolver conflitos entre regras. Capítulo 2.
+- **flex container**: Elemento com `display: flex`, que organiza seus filhos diretos em uma dimensão. Capítulo 5.
+- **flex item**: Filho direto de um flex container, controlado por propriedades como `flex-grow` e `flex-basis`. Capítulo 5.
+- **flexbox**: Modelo de layout unidimensional que distribui espaço e alinha itens em linha ou coluna. Capítulo 5.
+- **font-family**: Propriedade que define a lista de fontes de um texto, com alternativas de reserva. Capítulo 4.
+- **gap**: Propriedade que define o espaçamento entre itens em layouts flex e grid. Capítulos 5 e 6.
+- **grid**: Modelo de layout bidimensional baseado em linhas e colunas. Capítulo 6.
+- **grid-template-columns**: Propriedade que define o número e o tamanho das colunas de um grid. Capítulo 6.
+- **id**: Seletor iniciado por cerquilha (`#nome`) que escolhe o elemento com o atributo `id` correspondente. Capítulo 2.
+- **justify-content**: Propriedade que distribui os itens ao longo do eixo principal de um contêiner flex ou grid. Capítulo 5.
+- **margin**: Espaço externo de um elemento, entre sua borda e os elementos vizinhos. Capítulo 3.
+- **media query**: Consulta que condiciona um bloco de estilos a características do dispositivo. Capítulo 9.
+- **mobile first**: Estratégia que escreve primeiro os estilos para telas pequenas e amplia para telas maiores com media queries. Capítulo 9.
+- **modelo de caixa**: Estrutura que descreve todo elemento como uma caixa com conteúdo, padding, borda e margem. Capítulo 3.
+- **opacity**: Propriedade que define o nível de transparência de um elemento. Capítulo 4.
+- **padding**: Espaço interno de um elemento, entre o conteúdo e a borda. Capítulo 3.
+- **position**: Propriedade que define como um elemento é posicionado: `static`, `relative`, `absolute`, `fixed` ou `sticky`. Capítulo 7.
+- **propriedade**: Característica visual que se deseja alterar, como `color` ou `margin`, seguida de um valor. Capítulo 1.
+- **pseudo-classe**: Palavra-chave com dois pontos (`:hover`, `:focus`) que seleciona um elemento em determinado estado. Capítulo 2.
+- **pseudo-elemento**: Palavra-chave com dois pontos duplos (`::before`, `::after`) que seleciona parte de um elemento. Capítulo 2.
+- **regra CSS**: Conjunto formado por um seletor e um bloco de declarações entre chaves. Capítulo 1.
+- **rem**: Unidade relativa ao tamanho da fonte do elemento raiz. Capítulos 4 e 9.
+- **responsividade**: Capacidade de uma página se adaptar a diferentes tamanhos de tela. Capítulo 9.
+- **seletor**: Padrão que indica a quais elementos HTML uma regra CSS se aplica. Capítulo 2.
+- **stacking context**: Contexto de empilhamento que determina a ordem de sobreposição dos elementos, controlada por `z-index`. Capítulo 7.
+- **tipografia**: Conjunto de escolhas sobre fonte, tamanho, peso, espaçamento e altura de linha do texto. Capítulo 4.
+- **transform**: Propriedade que move, gira, escala ou inclina um elemento sem alterar o fluxo do documento. Capítulo 8.
+- **transition**: Propriedade que suaviza a mudança de valores de uma propriedade ao longo do tempo. Capítulo 8.
+- **variável CSS**: Valor reutilizável declarado com `--nome` e lido com `var(--nome)`. Capítulo 10.
+- **viewport**: Área visível da página no dispositivo do usuário. Capítulo 9.
+- **z-index**: Propriedade que define a ordem de empilhamento de elementos posicionados. Capítulo 7.

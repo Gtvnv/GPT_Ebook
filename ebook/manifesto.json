@@ -1,0 +1,19 @@
+{
+  "arquivos": [
+    "00-capa.md",
+    "01-introducao.md",
+    "02-seletores.md",
+    "03-modelo-de-caixa.md",
+    "04-cores-e-tipografia.md",
+    "05-flexbox.md",
+    "06-grid.md",
+    "07-posicionamento.md",
+    "08-transicoes-e-animacoes.md",
+    "09-responsividade.md",
+    "10-variaveis-css.md",
+    "11-boas-praticas.md",
+    "12-projeto-final.md",
+    "98-glossario.md",
+    "99-creditos-e-avisos.md"
+  ]
+}

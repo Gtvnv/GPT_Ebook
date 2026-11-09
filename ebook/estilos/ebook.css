@@ -1,0 +1,329 @@
+/* CSS na Galáxia - folha de estilo do e-book (HTML e PDF A4) */
+
+:root {
+  --espaco-fundo: #0b1026;
+  --espaco-fundo-2: #151b3d;
+  --texto: #1b1f2a;
+  --texto-suave: #4a5163;
+  --papel: #ffffff;
+  --destaque: #1f4fbf;
+  --dourado: #b8860b;
+  --borda: #cfd5e6;
+  --codigo-fundo: #f3f5fb;
+  --codigo-texto: #1c2340;
+}
+
+@page {
+  size: A4;
+  margin: 20mm 18mm 22mm 18mm;
+}
+
+@page :first {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 11pt;
+}
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--texto);
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.6;
+  orphans: 3;
+  widows: 3;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.25;
+  color: var(--espaco-fundo);
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--dourado);
+}
+
+h2 {
+  font-size: 1.45rem;
+  margin: 1.8rem 0 0.6rem;
+  color: var(--destaque);
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 1.4rem 0 0.4rem;
+}
+
+p {
+  margin: 0 0 0.8rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+a {
+  color: var(--destaque);
+  text-decoration: underline;
+}
+
+ul, ol {
+  margin: 0 0 0.8rem;
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+/* Capítulos: cada h1 inicia nova página */
+h1 {
+  break-before: page;
+  page-break-before: always;
+}
+
+/* Capa: o estilo fica só em div.capa; section.capa (wrapper) não tem estilo próprio */
+div.capa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 297mm;
+  padding: 25mm 20mm;
+  text-align: center;
+  color: #f4f6ff;
+  background: radial-gradient(circle at 20% 15%, var(--espaco-fundo-2), var(--espaco-fundo) 70%);
+  break-after: page;
+  page-break-after: always;
+}
+
+.capa h1 {
+  break-before: auto;
+  page-break-before: auto;
+  border: 0;
+  margin: 0 0 0.6rem;
+  font-size: 3.2rem;
+  letter-spacing: 0.04em;
+  color: #ffd84a;
+  text-transform: uppercase;
+}
+
+.capa .subtitulo {
+  max-width: 130mm;
+  margin: 0 auto 1.6rem;
+  text-align: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #dfe6ff;
+}
+
+.capa img {
+  max-width: 150mm;
+  max-height: 150mm;
+  border: 2px solid #ffd84a;
+  border-radius: 6px;
+}
+
+.capa .autoria {
+  margin-top: 1.6rem;
+  text-align: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 0.85rem;
+  color: #b9c3ea;
+}
+
+/* Sumário */
+.sumario {
+  break-before: page;
+  page-break-before: always;
+  break-after: page;
+  page-break-after: always;
+}
+
+.sumario h1,
+.sumario h2 {
+  break-before: auto;
+  page-break-before: auto;
+}
+
+.sumario ol,
+.sumario ul {
+  list-style: none;
+  padding-left: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.sumario li {
+  padding: 0.35rem 0;
+  border-bottom: 1px dotted var(--borda);
+}
+
+.sumario a {
+  color: var(--texto);
+  text-decoration: none;
+}
+
+/* Capítulos, glossário e créditos */
+.capitulo {
+  break-before: page;
+  page-break-before: always;
+}
+
+.capitulo > h1:first-child {
+  break-before: auto;
+  page-break-before: auto;
+}
+
+/* Blocos de código */
+pre {
+  margin: 0.8rem 0 1.1rem;
+  padding: 0.8rem 1rem;
+  background: var(--codigo-fundo);
+  color: var(--codigo-texto);
+  border: 1px solid var(--borda);
+  border-left: 4px solid var(--destaque);
+  border-radius: 4px;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+code {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.9em;
+  padding: 0.05em 0.3em;
+  background: var(--codigo-fundo);
+  border-radius: 3px;
+}
+
+pre code {
+  padding: 0;
+  background: none;
+  font-size: inherit;
+}
+
+/* Imagens */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+figure {
+  margin: 1rem 0;
+  break-inside: avoid;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+/* Citações e tabelas */
+blockquote {
+  margin: 1rem 0;
+  padding: 0.6rem 1rem;
+  border-left: 4px solid var(--dourado);
+  background: #fbf7e8;
+  color: var(--texto-suave);
+  break-inside: avoid;
+}
+
+table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  break-inside: avoid;
+}
+
+th, td {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--borda);
+  text-align: left;
+}
+
+th {
+  background: var(--espaco-fundo);
+  color: #ffffff;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--borda);
+  margin: 1.5rem 0;
+}
+
+/* Glossário (lista de definições) */
+dl {
+  margin: 0 0 1rem;
+}
+
+dt {
+  font-weight: bold;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--destaque);
+  break-after: avoid;
+}
+
+dd {
+  margin: 0 0 0.7rem 1.2rem;
+}
+
+/* Utilitários de quebra de página */
+.quebra-pagina {
+  break-after: page;
+  page-break-after: always;
+}
+
+.sem-quebra {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Tela: leitura confortável em HTML */
+@media screen {
+  body {
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+  }
+
+  div.capa {
+    min-height: 100vh;
+  }
+}
+
+/* Impressão: garante tema claro legível, sem sombras */
+@media print {
+  body {
+    background: var(--papel);
+    color: var(--texto);
+  }
+
+  a {
+    color: var(--destaque);
+  }
+}
